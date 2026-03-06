@@ -22,7 +22,10 @@
         <input type="number" id="price" placeholder="Precio">
         <input type="text" id="seller" placeholder="Vendedor">
         <input type="text" id="category" placeholder="Categoría">
-        <input type="image" id="img" placeholder="img">
+        <!--se coloca selector para las imagenes que vamos a meter en el proyecto-->
+        <select id="img">
+            <option value="">Seleccionar imagen</option>
+        </select>
         <input type="date" id="date" placeholder="Fecha">
         <input type="number" id="stock" placeholder="Disponibilidad">
         <button type="submit" id="submitBtn">Agregar</button>
@@ -45,6 +48,7 @@
         </thead>
         <tbody id="itemsTable"></tbody>
     </table>
+
 
     <script type="module" src="./js/main.js"></script>
 </body>

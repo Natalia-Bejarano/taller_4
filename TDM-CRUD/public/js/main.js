@@ -4,6 +4,14 @@ import { renderItems, resetForm, fillForm } from "./ui/ui.js";
 const form = document.getElementById("itemForm");
 const tableBody = document.getElementById("itemsTable");
 const submitBtn = document.getElementById("submitBtn");
+//imagenes
+const imgSelect = document.getElementById("img");
+
+const images = [
+    //{ name: "Manzana", path: "images/manzana.png" } EJEMPLO
+    
+];
+
 let editingId = null;
 
 // Eventos de tabla (delegación)
@@ -87,6 +95,18 @@ form.addEventListener("submit", async (e) => {
         console.error("Error guardando item:", err);
         alert("No se pudo guardar el item.");
     }
+});
+
+//append de imagenes
+images.forEach(image => {
+
+    const option = document.createElement("option");
+
+    option.value = image.path;
+    option.textContent = image.name;
+
+    imgSelect.appendChild(option);
+
 });
 
 // Cargar al inicio
