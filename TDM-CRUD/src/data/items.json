@@ -1,35 +1,24 @@
 [
   {
-    "name": "ui000",
-    "description": "sd",
-    "price": "45",
-    "seller": "yerson",
-    "img": "",
+    "name": "sdfsdf",
+    "description": "sdf",
+    "price": "34",
+    "seller": "asd",
+    "img": "recursos/bandanaDrag.png",
     "category": "yo",
-    "date": "2026-03-02",
+    "date": "2026-03-17",
     "stock": "1",
-    "id": 1772630292009
+    "id": 1772829173864
   },
   {
-    "name": "yo",
-    "description": "si",
-    "price": "2",
-    "seller": "u",
-    "img": "",
-    "category": "w",
-    "date": "2026-03-05",
-    "stock": "90",
-    "id": 1772759557075
-  },
-  {
-    "name": "borojo",
-    "description": "increible",
-    "price": "8900",
-    "seller": "yulieth",
-    "img": "",
-    "category": "fruta",
-    "date": "2026-03-06",
-    "stock": "89",
-    "id": 1772760198896
+    "name": "asd",
+    "description": "sad",
+    "price": "1",
+    "seller": "asd",
+    "img": "recursos/CapaL.png",
+    "category": "qsad",
+    "date": "2026-04-01",
+    "stock": "1",
+    "id": 1772829371446
   }
 ]

@@ -8,9 +8,41 @@ const submitBtn = document.getElementById("submitBtn");
 const imgSelect = document.getElementById("img");
 
 const images = [
-    //{ name: "Manzana", path: "images/manzana.png" } EJEMPLO
-    
+"recursos/bandanaDrag.png",
+"recursos/BandanaJapB.png",
+"recursos/BandanaJapN.png",
+"recursos/CapaL.png",
+"recursos/cosplayL.png",
+"recursos/funkoPopLuffy.png",
+"recursos/GetaMaderaN.png",
+"recursos/GetaMaderaR.png",
+"recursos/GetaNegra.png",
+"recursos/HaoriAzulRey.png",
+"recursos/HaoriB.png",
+"recursos/HaoriBeigeBlue.png",
+"recursos/itachiFunko.jpg",
+"recursos/itachiFunko.png",
+"recursos/Katana.png",
+"recursos/KatanaMangoN.png",
+"recursos/KatanaRoja.png",
+"recursos/Kimono.png",
+"recursos/KimonoAR.png",
+"recursos/mikasa.png",
+"recursos/narutoFunko.png",
+"recursos/sombreroLuffy.png",
+"recursos/sombreroOneP.png",
+"recursos/SombreroOnePiece.png",
+"recursos/TsubaDor.png",
+"recursos/TsubaVer.png",
+"recursos/TsubaVerd.png",
+"recursos/Yukata.png",
+"recursos/YukataAzulR.png",
+"recursos/YukataBeige.png",
+"recursos/YukataFlor.png",
+"recursos/YukataRojo.png"
 ];
+
+
 
 let editingId = null;
 
@@ -98,15 +130,11 @@ form.addEventListener("submit", async (e) => {
 });
 
 //append de imagenes
-images.forEach(image => {
-
+images.forEach(imgPath => {
     const option = document.createElement("option");
-
-    option.value = image.path;
-    option.textContent = image.name;
-
+    option.value = imgPath;
+    option.textContent = imgPath.split("/").pop();
     imgSelect.appendChild(option);
-
 });
 
 // Cargar al inicio

@@ -8,8 +8,8 @@ export function renderItems(items, tableBody) {
             <td>${item.description || ""}</td>
             <td>${item.price}</td>
             <td>${item.seller || ""}</td>
-            <td>${item.img || ""}</td>
             <td>${item.category}</td>
+            <td>${item.img || ""}</td>
             <td>${item.date}</td>
             <td>${item.stock}</td>
             <td>
@@ -31,8 +31,8 @@ export function fillForm(form, item, submitBtn) {
     form.querySelector("#description").value = item.description || "";
     form.querySelector("#price").value = item.price;
     form.querySelector("#seller").value = item.seller || "";
-    form.querySelector("#img").value = item.img || "";
     form.querySelector("#category").value = item.category;
+    form.querySelector("#img").value = item.img || "";
     form.querySelector("#date").value = item.date;
     form.querySelector("#stock").value = item.stock;
     

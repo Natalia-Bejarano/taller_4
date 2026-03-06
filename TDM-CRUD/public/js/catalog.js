@@ -50,13 +50,15 @@ function renderItem(item) {
     const name = document.createElement("h3");
     name.textContent = item.name;
 
+    
     // modal
-    card.addEventListener("click", () => {
-    openModal(item);
-    });
+    const btnModal = document.createElement("button");
+    btnModal.textContent = "Ver más";
+    btnModal.classList.add("btn-modal");
 
-    const description = document.createElement("p");
-    description.textContent = item.description;
+    btnModal.addEventListener("click", () => {
+        openModal(item);
+    });
 
     const price = document.createElement("p");
     price.textContent = "Precio: $" + item.price;
@@ -64,23 +66,15 @@ function renderItem(item) {
     const seller = document.createElement("p");
     seller.textContent = "Vendedor: " + item.seller;
 
-    const category = document.createElement("p");
-    category.textContent = "Categoría: " + item.category;
-
-    const date = document.createElement("p");
-    date.textContent = "Fecha: " + item.date;
-
     const stock = document.createElement("p");
     stock.textContent = "Stock: " + item.stock;
 
     card.appendChild(img);
     card.appendChild(name);
-    card.appendChild(description);
     card.appendChild(price);
     card.appendChild(seller);
-    card.appendChild(category);
-    card.appendChild(date);
     card.appendChild(stock);
+    card.appendChild(btnModal);
 
     catalogContainer.appendChild(card);
 }
