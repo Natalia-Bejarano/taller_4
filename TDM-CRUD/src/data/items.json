@@ -31,5 +31,104 @@
     "date": "2026-03-07",
     "stock": 1,
     "id": 1772908430106
+  },
+  {
+    "name": "Yukata",
+    "description": "Yukata edición limitada pro",
+    "price": 600000,
+    "seller": "erenY34",
+    "img": "recursos/Yukata.png",
+    "category": "Yukatas",
+    "date": "2026-03-07",
+    "stock": 23,
+    "id": 1772910748622
+  },
+  {
+    "name": "Sombrero One Piece",
+    "description": "Sombrero de Luffy edición limitada One Piece",
+    "price": 500000,
+    "seller": "Danigre23",
+    "img": "recursos/sombreroOneP.png",
+    "category": "Sombrero",
+    "date": "2026-02-01",
+    "stock": 5,
+    "id": 1772910923831
+  },
+  {
+    "name": "Geta Madera",
+    "description": "Geta Japonesa en madera",
+    "price": 230000,
+    "seller": "paulJ4",
+    "img": "recursos/GetaMaderaR.png",
+    "category": "Getas",
+    "date": "2026-02-22",
+    "stock": 14,
+    "id": 1772910980865
+  },
+  {
+    "name": "Tsuba",
+    "description": "Tsuba edición especial Japón",
+    "price": 520000,
+    "seller": "yamaliTo00",
+    "img": "recursos/TsubaDor.png",
+    "category": "Tsuba",
+    "date": "2025-12-03",
+    "stock": 22,
+    "id": 1772911089240
+  },
+  {
+    "name": "Yukata Beige",
+    "description": "Yukata color Beige edición especial Japón",
+    "price": 2700000,
+    "seller": "Haori",
+    "img": "recursos/YukataBeige.png",
+    "category": "Haoris",
+    "date": "2026-03-02",
+    "stock": 9,
+    "id": 1772911181039
+  },
+  {
+    "name": "Naruto Funko Pop",
+    "description": "Funko Pop de Naruto edición especial",
+    "price": 420000,
+    "seller": "tFlext33",
+    "img": "recursos/narutoFunko.png",
+    "category": "Funkos",
+    "date": "2026-02-28",
+    "stock": 12,
+    "id": 1772911249232
+  },
+  {
+    "name": "Uniforme Legión Reconocimiento",
+    "description": "Uniforme de Legión Attack on Titan",
+    "price": 350000,
+    "seller": "lolsi5",
+    "img": "recursos/mikasa.png",
+    "category": "uniformes - cosplay",
+    "date": "2026-02-22",
+    "stock": 5,
+    "id": 1772911328225
+  },
+  {
+    "name": "Uniforme Capitán Levi",
+    "description": "Uniforme Capitán Levi - AOT",
+    "price": 560000,
+    "seller": "Sarr4",
+    "img": "recursos/cosplayL.png",
+    "category": "uniformes - cosplay",
+    "date": "2026-02-08",
+    "stock": 9,
+    "id": 1772911415799
+  },
+  {
+    "name": "Geta Madera",
+    "description": "Geta Japonesa en madera",
+    "price": 450000,
+    "seller": "PaulJ4",
+    "img": "recursos/GetaMaderaN.png",
+    "category": "Getas",
+    "date": "2026-02-07",
+    "stock": 8,
+    "id": 1772911500530
   }
 ]
