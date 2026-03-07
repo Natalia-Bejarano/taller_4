@@ -1,94 +1,584 @@
+/* inicializacion de variables */
+:root {
+    --color-red: #d7001f;
+    --color-black: #111111;
+    --color-black-soft: #1c1c1c;
+    --color-white: #ffffff;
+    --color-gray-100: #f4f4f4;
+    --color-gray-200: #e7e7e7;
+    --color-gray-300: #d5d5d5;
+    --color-gray-500: #7a7a7a;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --shadow-soft: 0px 8px 20px #d9d9d9;
+    --shadow-card: 0px 10px 24px #d6d6d6;
+    --shadow-hover: 0px 16px 30px #cfcfcf;
+
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.3s ease;
+
+    --max-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background: #f9f9f9;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-black);
+    background: #fafafa;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 h1 {
-    color: #333;
+    width: 1200px;
+    max-width: 1200px;
+    margin: 32px auto 24px;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--color-black);
 }
 
-form {
-    margin-bottom: 20px;
+h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: var(--color-red);
 }
 
-input {
-    padding: 8px;
-    margin-right: 5px;
-}
-
-button {
-    padding: 8px 12px;
-    background: #007acc;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #005fa3;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-/* Navbar */
+/* barra de nav */
 .navbar {
-    background: #333;
-    padding: 0.5rem;
+    background: var(--color-black);
+    padding: 14px 0px;
+    box-shadow: var(--shadow-soft);
 }
 
+/* navegacion */
 .navbar ul {
+    width: 1200px;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px;
     list-style: none;
     display: flex;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+    gap: 20px;
 }
 
 .navbar a {
-    color: white;
+    color: var(--color-white);
     text-decoration: none;
+    font-weight: bold;
+    transition: color var(--transition-fast);
 }
 
 .navbar a:hover {
-    text-decoration: underline;
+    color: #ffb3bd;
 }
-.modal{
+
+/* gestion base */
+#itemForm {
+    width: 1200px;
+    max-width: 1200px;
+    margin: 0px auto 32px;
+    padding: 20px;
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    background: var(--color-white);
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+/* el de select */
+#itemForm input,
+#itemForm select {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid var(--color-gray-300);
+    border-radius: 10px;
+    background: var(--color-white);
+    color: var(--color-black);
+    font-size: 14px;
+    outline: none;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+#itemForm input::placeholder {
+    color: var(--color-gray-500);
+}
+
+#itemForm input:focus,
+#itemForm select:focus {
+    border-color: var(--color-red);
+    box-shadow: 0px 0px 0px 3px #ffd6dc;
+}
+
+/* selector de imagen */
+.img-select-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#img {
+    min-height: 44px;
+    font-size: 14px;
+    padding: 10px 12px;
+    border: 1px solid var(--color-gray-300);
+    border-radius: 10px;
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+.img-preview-mini {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 10px;
+    background: white;
+    padding: 4px;
+    box-shadow: var(--shadow-soft);
+    display: none;
+}
+
+/* botones delete, id, el del modal */
+button,
+#submitBtn,
+.btn-modal,
+.btn-edit,
+.btn-delete {
+    min-height: 44px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+#submitBtn,
+.btn-modal,
+.btn-edit {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+#submitBtn:hover,
+.btn-modal:hover,
+.btn-edit:hover {
+    background: var(--color-red);
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 20px #f0b8c0;
+}
+
+.btn-delete {
+    background: var(--color-white);
+    color: var(--color-red);
+    border: 1px solid var(--color-red);
+}
+
+.btn-delete:hover {
+    background: var(--color-red);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+button:active,
+#submitBtn:active,
+.btn-modal:active,
+.btn-edit:active,
+.btn-delete:active {
+    transform: scale(0.98);
+}
+
+/* la tabla de gestion */
+table {
+    width: 1200px;
+    max-width: 1200px;
+    margin: 0px auto 48px;
+    border-collapse: collapse;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+thead {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+th,
+td {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--color-gray-200);
+    text-align: left;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+th {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+tbody tr:hover {
+    background: #fff1f3;
+}
+
+td button {
+    margin: 2px;
+}
+
+.table-item-img,
+#itemsTable img,
+table img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    margin: 0px auto;
+    padding: 4px;
+    border-radius: 8px;
+    background: white;
+    border: 1px solid var(--color-gray-200);
+}
+
+/* catalogo */
+.catalog-flex {
+    width: 1200px;
+    max-width: 1200px;
+    margin: 0px auto 48px;
+    display: grid;
+    grid-template-columns: 240px 240px 240px 240px;
+    gap: 20px;
+    position: relative;
+    justify-content: center;
+}
+
+.catalog-flex:empty {
+    min-height: 300px;
+}
+
+.catalog-flex:empty::before {
+    /* aqui se hace la animacion */
+    content: "";
+    display: block;
+    width: 1200px;
+    height: 300px;
+    border-radius: 20px;
+    border: 1px solid var(--color-gray-200);
+    background: linear-gradient(90deg, #f3f3f3 25%, #ffffff 50%, #f3f3f3 75%);
+    background-size: 200px 100px;
+    animation: shimmer 1.6s infinite linear;
+}
+
+.catalog-flex:empty::after {
+    /* aqui se hace la animacion */
+    content: "Cargando catálogo...";
+    position: absolute;
+    left: 500px;
+    bottom: 24px;
+    font-size: 14px;
+    font-weight: bold;
+    background: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--color-gray-200);
+}
+
+.catalog-card {
+    width: 240px;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 18px;
+    padding: 16px;
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.catalog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.catalog-card img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin: 0px auto 16px;
+    padding: 6px;
+    border-radius: 12px;
+    background: var(--color-gray-100);
+    transition: transform var(--transition-medium);
+}
+
+.catalog-card:hover img {
+    transform: scale(1.05);
+}
+
+.catalog-card h3 {
+    margin: 0px 0px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-black);
+}
+
+.catalog-card p {
+    margin: 6px 0px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.catalog-card p:first-of-type {
+    color: var(--color-red);
+    font-weight: bold;
+}
+
+.catalog-card .btn-modal {
+    width: 100%;
+    margin-top: 12px;
+}
+
+/* el modal */
+.modal {
     position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: #222222;
     display: none;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-}
-
-.modal-content{
-    background: white;
     padding: 20px;
+    z-index: 30;
+}
+
+.modal-content {
+    position: relative;
+    width: 520px;
+    max-width: 520px;
+    max-height: 700px;
+    overflow-y: auto;
+    background: var(--color-white);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 20px 50px #cfcfcf;
+    text-align: left;
+    animation: modalPop 0.25s ease;
+}
+
+.modal-content img {
+    width: 260px;
+    height: 260px;
+    object-fit: contain;
+    border-radius: 16px;
+    margin: 0px auto 16px;
+    background: var(--color-gray-100);
+    padding: 6px;
+    box-shadow: 0px 8px 20px #d8d8d8;
+}
+
+.modal-content h2 {
+    margin: 0px 0px 14px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-black);
+    padding-right: 40px;
+}
+
+.modal-content p {
+    margin: 8px 0px;
+    padding: 10px 12px;
+    background: #fafafa;
+    border: 1px solid var(--color-gray-200);
     border-radius: 10px;
-    max-width: 400px;
-    width: 90%;
-    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
 }
 
-.modal-content img{
-    width: 100%;
-    border-radius: 8px;
-}
-
-.close-modal{
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-black);
+    color: var(--color-white);
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 20px;
-    float: right;
+    transition: transform var(--transition-fast);
+}
+
+.close-modal:hover {
+    background: var(--color-red);
+    transform: scale(1.05);
+}
+
+/* una pequeña animacion de cuando no hay nada en el catalogo, aqui se hace se define arriba  */
+@keyframes shimmer {
+    0% {
+        background-position: 200px 0px;
+    }
+    100% {
+        background-position: -200px 0px;
+    }
+}
+
+@keyframes modalPop {
+    from {
+        opacity: 0;
+        transform: scale(0.96) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0px);
+    }
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+    #itemForm {
+        width: 900px;
+        max-width: 900px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navbar ul,
+    table,
+    .catalog-flex,
+    h1 {
+        width: 900px;
+        max-width: 900px;
+    }
+
+    .catalog-flex {
+        grid-template-columns: 240px 240px 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 700px;
+        max-width: 700px;
+    }
+
+    #itemForm {
+        width: 700px;
+        max-width: 700px;
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        width: 700px;
+        max-width: 700px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .catalog-flex {
+        width: 700px;
+        max-width: 700px;
+        grid-template-columns: 240px 240px;
+    }
+
+    h1 {
+        width: 700px;
+        max-width: 700px;
+    }
+
+    .table-item-img,
+    #itemsTable img,
+    table img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .img-preview-mini {
+        width: 64px;
+        height: 64px;
+    }
+
+    .modal-content img {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        width: 320px;
+        max-width: 320px;
+        font-size: 32px;
+    }
+
+    .navbar ul,
+    #itemForm,
+    table,
+    .catalog-flex {
+        width: 320px;
+        max-width: 320px;
+    }
+
+    th,
+    td {
+        padding: 10px 8px;
+    }
+
+    .catalog-flex {
+        grid-template-columns: 240px;
+    }
+
+    .catalog-card img {
+        width: 95px;
+        height: 95px;
+    }
+
+    .table-item-img,
+    #itemsTable img,
+    table img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .img-preview-mini {
+        width: 58px;
+        height: 58px;
+    }
+
+    .modal-content {
+        width: 300px;
+        max-width: 300px;
+        max-height: 520px;
+    }
+
+    .modal-content img {
+        width: 200px;
+        height: 200px;
+    }
 }

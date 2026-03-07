@@ -14,20 +14,29 @@
         </ul>
     </nav>
 
-    <h1>Gestión de Items</h1>
+    <h1>Venta de productos Japoneses</h1>
 
     <form id="itemForm">
         <input type="text" id="name" placeholder="Nombre del item" required>
         <input type="text" id="description" placeholder="Descripción">
-        <input type="number" id="price" placeholder="Precio">
+         <!--validacion de precio-->
+        <input type="number" id="price" placeholder="Precio" min="0.01" step="0.01">
         <input type="text" id="seller" placeholder="Vendedor">
         <input type="text" id="category" placeholder="Categoría">
         <!--se coloca selector para las imagenes que vamos a meter en el proyecto-->
-        <select id="img">
-            <option value="">Seleccionar imagen</option>
-        </select>
+        <!--imagenes chiquitas-->
+        <div class="img-select-wrap">
+            <select id="img">
+                <option value="">Seleccionar imagen</option>
+            </select>
+
+            <img id="imgPreview" src="" alt="Vista previa" class="img-preview-mini">
+        </div>
+        
+        
         <input type="date" id="date" placeholder="Fecha">
-        <input type="number" id="stock" placeholder="Disponibilidad">
+        <!--validacion de stock-->
+        <input type="number" id="stock" placeholder="Disponibilidad" min="0" step="1">
         <button type="submit" id="submitBtn">Agregar</button>
     </form>
 

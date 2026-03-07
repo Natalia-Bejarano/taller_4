@@ -1,14 +1,14 @@
 let modal;
 let modalContent;
-
+//aqio se crea el modal base
 export function initModal(){
-
+    //fonmdo oscuro
     modal = document.createElement("div");
     modal.classList.add("modal");
-
+    //cajita dle contenido
     modalContent = document.createElement("div");
     modalContent.classList.add("modal-content");
-
+    //se mete la caja dentro del fondo
     modal.appendChild(modalContent);
 
     document.body.appendChild(modal);
@@ -19,11 +19,10 @@ export function initModal(){
         }
     });
 }
-
+//abre modal, y mete la info
 export function openModal(item){
-
-    modalContent.innerHTML = "";
-
+    modalContent.innerHTML = ""
+    //igual tenicamente que en main, ez
     const closeBtn = document.createElement("span");
     closeBtn.textContent = "X";
     closeBtn.classList.add("close-modal");

@@ -1,24 +1,35 @@
 [
   {
-    "name": "sdfsdf",
-    "description": "sdf",
-    "price": "34",
-    "seller": "asd",
-    "img": "recursos/bandanaDrag.png",
-    "category": "yo",
-    "date": "2026-03-17",
-    "stock": "1",
-    "id": 1772829173864
+    "name": "FunkoPop",
+    "description": "FunkoPop de Luffy edición limitada One Piece",
+    "price": 75459,
+    "seller": "AnimeLover2000",
+    "img": "recursos/funkoPopLuffy.png",
+    "category": "Funkos",
+    "date": "2026-03-07",
+    "stock": 2,
+    "id": 1772908340868
   },
   {
-    "name": "asd",
-    "description": "sad",
-    "price": "1",
-    "seller": "asd",
-    "img": "recursos/CapaL.png",
-    "category": "qsad",
-    "date": "2026-04-01",
-    "stock": "1",
-    "id": 1772829371446
+    "name": "Katana",
+    "description": "Katana Roja",
+    "price": 1000000,
+    "seller": "KatanaLoverXd",
+    "img": "recursos/KatanaRoja.png",
+    "category": "Katanas",
+    "date": "2026-03-01",
+    "stock": 1,
+    "id": 1772908392950
+  },
+  {
+    "name": "Haori",
+    "description": "Haori god",
+    "price": 9999999,
+    "seller": "Haori",
+    "img": "recursos/HaoriB.png",
+    "category": "Haoris",
+    "date": "2026-03-07",
+    "stock": 1,
+    "id": 1772908430106
   }
 ]
